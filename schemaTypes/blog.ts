@@ -14,17 +14,27 @@ export const blog = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'author',
-      type: 'string',
-    }),
-    defineField({
       name: 'mainImage',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
     }),
     defineField({
       name: 'content',
       type: 'array',
       of: [{type: 'block'}, {type: 'image'}],
+    }),
+    defineField({
+      name: 'author',
+      type: 'string',
+    }),
+    defineField({
+      name: 'authorPic',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     }),
   ],
 })
