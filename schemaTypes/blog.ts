@@ -17,7 +17,18 @@ export const blog = defineType({
       name: 'mainImage',
       type: 'image',
       options: {
-        hotspot: true,
+        hotspot: {
+          previews: [
+            {
+              title: 'Blog page / 1st in grid',
+              aspectRatio: 3 / 2,
+            },
+            {
+              title: 'Regular grid',
+              aspectRatio: 21 / 16,
+            },
+          ],
+        },
       },
     }),
     defineField({
@@ -33,7 +44,9 @@ export const blog = defineType({
       name: 'authorPic',
       type: 'image',
       options: {
-        hotspot: true,
+        hotspot: {
+          previews: [{title: 'Display', aspectRatio: 1}],
+        },
       },
     }),
   ],
